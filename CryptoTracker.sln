@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoTracker.API", "CryptoTracker.API\CryptoTracker.API.csproj", "{8008280B-ED14-4764-A761-898457F5562D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoTracker.Domain", "CryptoTracker.Domain\CryptoTracker.Domain.csproj", "{0E775D15-A057-46CB-AA7C-F97DA1664D53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoTracker.Application", "CryptoTracker.Application\CryptoTracker.Application.csproj", "{6EDD9A9C-1F6F-4160-A21E-16E6B182987A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{8008280B-ED14-4764-A761-898457F5562D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8008280B-ED14-4764-A761-898457F5562D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8008280B-ED14-4764-A761-898457F5562D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E775D15-A057-46CB-AA7C-F97DA1664D53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E775D15-A057-46CB-AA7C-F97DA1664D53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E775D15-A057-46CB-AA7C-F97DA1664D53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E775D15-A057-46CB-AA7C-F97DA1664D53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EDD9A9C-1F6F-4160-A21E-16E6B182987A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EDD9A9C-1F6F-4160-A21E-16E6B182987A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EDD9A9C-1F6F-4160-A21E-16E6B182987A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EDD9A9C-1F6F-4160-A21E-16E6B182987A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

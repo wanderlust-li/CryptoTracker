@@ -19,4 +19,8 @@
       </Content>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\CryptoTracker.Application\CryptoTracker.Application.csproj" />
+    </ItemGroup>
+
 </Project>
