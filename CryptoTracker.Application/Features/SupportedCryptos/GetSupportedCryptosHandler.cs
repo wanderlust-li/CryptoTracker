@@ -17,11 +17,11 @@ public class GetSupportedCryptosHandler : IRequestHandler<GetSupportedCryptosQue
         _client = client;
         _apiKey = configuration["CryptoAPI_ApiKey"];
     }
-
     
     public async Task<List<Asset>> Handle(GetSupportedCryptosQuery request, CancellationToken cancellationToken)
     {
-        var restRequest = new RestRequest("v1/assets/icons/3", Method.Get);
+        // https://rest.coinapi.io/v1/metrics/listing
+        var restRequest = new RestRequest("v1/metrics/listing", Method.Get);
         restRequest.AddHeader("Accept", "application/json");
         restRequest.AddHeader("X-CoinAPI-Key", _apiKey);
 
