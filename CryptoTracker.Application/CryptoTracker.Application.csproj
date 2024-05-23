@@ -8,6 +8,15 @@
 
     <ItemGroup>
       <PackageReference Include="FluentValidation" Version="11.9.1" />
+      <PackageReference Include="MediatR" Version="11.1.0" />
+      <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+      <PackageReference Include="Microsoft.Extensions.Http" Version="9.0.0-preview.4.24266.19" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+      <PackageReference Include="RestSharp" Version="111.0.1-alpha.0.4" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CryptoTracker.Domain\CryptoTracker.Domain.csproj" />
     </ItemGroup>
 
 </Project>
