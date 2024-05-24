@@ -8,6 +8,8 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["CryptoTracker.API/CryptoTracker.API.csproj", "CryptoTracker.API/"]
+COPY ["CryptoTracker.Application/CryptoTracker.Application.csproj", "CryptoTracker.Application/"]
+COPY ["CryptoTracker.Domain/CryptoTracker.Domain.csproj", "CryptoTracker.Domain/"]
 RUN dotnet restore "CryptoTracker.API/CryptoTracker.API.csproj"
 COPY . .
 WORKDIR "/src/CryptoTracker.API"

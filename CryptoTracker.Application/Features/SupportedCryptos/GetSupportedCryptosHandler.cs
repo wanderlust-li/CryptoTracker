@@ -1,3 +1,4 @@
+using CryptoTracker.Application.Exceptions;
 using CryptoTracker.Domain;
 using MediatR;
 using Microsoft.Extensions.Configuration;
@@ -20,8 +21,7 @@ public class GetSupportedCryptosHandler : IRequestHandler<GetSupportedCryptosQue
     
     public async Task<List<Asset>> Handle(GetSupportedCryptosQuery request, CancellationToken cancellationToken)
     {
-        // https://rest.coinapi.io/v1/metrics/listing
-        var restRequest = new RestRequest("v1/metrics/listing", Method.Get);
+        var restRequest = new RestRequest("v1/assets", Method.Get);
         restRequest.AddHeader("Accept", "application/json");
         restRequest.AddHeader("X-CoinAPI-Key", _apiKey);
 
@@ -29,7 +29,7 @@ public class GetSupportedCryptosHandler : IRequestHandler<GetSupportedCryptosQue
         
         if (!response.IsSuccessful)
         {
-            throw new HttpRequestException($"API request failed: {response.StatusCode}, Content: {response.Content}");
+            throw new BadRequestException($"API request failed: {response.StatusCode}, Content: {response.Content}");
         }
         
         var cryptos = JsonConvert.DeserializeObject<List<Asset>>(response.Content);
